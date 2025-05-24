@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Панарома</title>
-    <script src="https://naver.github.io/egjs-view360/release/latest/dist/view360.pkgd.min.js"></script>
+    <script src="https://naver.github.io/egjs-view360/release/4.0.0-beta.7/view360.pkgd.js"></script>
+    <link rel="stylesheet" href="https://naver.github.io/egjs-view360/release/4.0.0-beta.7/css/view360.min.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="panorama">
+        <div id="viewer" class="view360-container is-16by9">
+            <canvas class="view360-canvas" />
+            <div class="view360-hotspots">
+                <div class="view360-hotspot" data-yaw="50" data-pitch="50">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, totam natus, aut veniam debitis eos rem ratione reiciendis praesentium sit deleniti dolore rerum libero quaerat voluptate itaque vel recusandae ad?</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
