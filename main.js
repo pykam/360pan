@@ -2,11 +2,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     // View360 is registered globally.
     const viewer = new View360("#viewer", {
-    //EquirectProjection and all other items are stored as properties within View360.
+    // initialPitch: 0,
+    initialYaw: 55,
     projection: new View360. CylindricalProjection({
-        src: "images/IMG_9553.jpg",
+        src: "images/IMG_9556.jpg",
         partial: true,
     })
 
     });
-})
+});
+
+const showInfo = document.querySelectorAll('.search-hotspot');
+const dialog = document.querySelector("dialog");
+const closeButton = document.querySelector(".btn-close");
+
+for (let i = 0; i < showInfo.length; i++) {
+    showInfo[i].addEventListener("click", () => {
+        const img = document.querySelector("img");
+        const imageName = showInfo[i].dataset.item;
+        img.setAttribute("src", "images/" + imageName + ".jpg");
+        dialog.showModal();
+    });
+}
+
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});

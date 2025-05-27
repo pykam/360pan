@@ -6,19 +6,23 @@
     <title>Панарома</title>
     <script src="https://naver.github.io/egjs-view360/release/4.0.0-beta.7/view360.pkgd.js"></script>
     <link rel="stylesheet" href="https://naver.github.io/egjs-view360/release/4.0.0-beta.7/css/view360.min.css">
-    <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="panorama">
         <div id="viewer" class="view360-container is-16by9">
-            <canvas class="view360-canvas" />
+            <canvas class="view360-canvas"></canvas>
             <div class="view360-hotspots">
-                <div class="view360-hotspot" data-yaw="50" data-pitch="50">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, totam natus, aut veniam debitis eos rem ratione reiciendis praesentium sit deleniti dolore rerum libero quaerat voluptate itaque vel recusandae ad?</p>
-                </div>
+                <div class="view360-hotspot search-hotspot" data-yaw="53" data-pitch="7" data-item="1"></div>
             </div>
         </div>
     </div>
+    <dialog aria-label="Информация">
+        <div class="panorama-info">
+            <img src="" alt="">    
+            <button class="btn-close" autofocus>Закрыть</button>        
+        </div>
+    </dialog>
+    <script src="main.js"></script>
 </body>
 </html>

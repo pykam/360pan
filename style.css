@@ -3,3 +3,41 @@
     height: 800px;
     margin: 0 auto;
 }
+
+.search-hotspot {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #000;
+    cursor: pointer;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+}
+
+.search-hotspot::after {
+    content: "";
+    display: flex;
+    background-image: url(/images/search.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+dialog {
+    width: 300px;
+    border: transparent;
+    scrollbar-width: none;
+    border-radius: 20px;
+}
+
+dialog img {
+    width: 100%;
+    object-fit: contain;
+}
+
+::backdrop {
+  opacity: 0.2;
+}
