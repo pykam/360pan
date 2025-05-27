@@ -1,8 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    // View360 is registered globally.
     const viewer = new View360("#viewer", {
-    // initialPitch: 0,
     initialYaw: 55,
     projection: new View360. CylindricalProjection({
         src: "images/IMG_9556.jpg",
