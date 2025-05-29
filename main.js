@@ -23,10 +23,10 @@ const showInfo = document.querySelectorAll('.search-hotspot');
 const dialog = document.querySelector("dialog");
 const closeButton = document.querySelector(".btn-close");
 const info = document.querySelector(".info");
+const img = document.querySelector("img");
 
 for (let i = 0; i < showInfo.length; i++) {
     showInfo[i].addEventListener("click", () => {
-        const img = document.querySelector("img");
         const imageName = showInfo[i].dataset.item;
         img.setAttribute("src", "images/" + imageName + ".jpg");
         info.innerHTML = showInfo[i].querySelector(".desc").innerHTML;
@@ -35,5 +35,7 @@ for (let i = 0; i < showInfo.length; i++) {
 }
 
 closeButton.addEventListener("click", () => {
-  dialog.close();
+    info.innerHTML = '';
+    img.setAttribute("src", "");
+    dialog.close();
 });
