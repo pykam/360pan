@@ -34,6 +34,14 @@ for (let i = 0; i < showInfo.length; i++) {
     });
 }
 
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) {
+        info.innerHTML = '';
+        img.setAttribute("src", "");
+        dialog.close();
+    }
+  });
+
 closeButton.addEventListener("click", () => {
     info.innerHTML = '';
     img.setAttribute("src", "");
