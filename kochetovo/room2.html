@@ -1,54 +1,28 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музей с. Кочетово</title>
+    <title>Музей с. Кочетово - Комната 2</title>
     <script src="https://naver.github.io/egjs-view360/release/4.0.0-beta.7/view360.pkgd.js"></script>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://naver.github.io/egjs-view360/release/4.0.0-beta.7/css/view360.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/kochetovo/style.css">
 </head>
 <body>
-    <div class="panorama">
+
+    <div class="container pb-2">
         <h1>Штаб квартира красных партизан</h1>
-        <h2>Комната 1</h2>
-        <div id="room1" class="view360-container is-16by9">
-            
-            <canvas class="view360-canvas"></canvas>
-            <div class="view360-hotspots">
-                <div class="view360-hotspot search-hotspot" data-yaw="53" data-pitch="7" data-item="1">
-                    <span class="desc">Прялка<br>Дерево, ручная работа, резьба<br>90x48</span>
-                </div>
-                <div class="view360-hotspot search-hotspot" data-yaw="-30" data-pitch="14" data-item="2">
-                    <span class="desc">Весы железные, длинные<br>Металл-ковка<br>90x140, 55см</span>
-                </div>                
-                <div class="view360-hotspot search-hotspot" data-yaw="30" data-pitch="-14" data-item="3">
-                    <span class="desc">Диван-кушетка<br>Подлинник, дерево, резьба<br>73x63</span>
-                </div>
-                <div class="view360-hotspot search-hotspot" data-yaw="49" data-pitch="3" data-item="4">
-                    <span class="desc">Ведро деревянное коричневого цвета<br>Дерево, резьба<br>32х27</span>
-                </div>                
-                <div class="view360-hotspot search-hotspot" data-yaw="57" data-pitch="2" data-item="5">
-                    <span class="desc">Сусек для хранения зерна<br>Дерево, резьба<br>4x1,5</span>
-                </div>                
-                <div class="view360-hotspot search-hotspot" data-yaw="64" data-pitch="0" data-item="6">
-                    <span class="desc">Деревянный сосуд для поднятия опары<br>Дерево, резьба, металл<br>27x33</span>
-                </div>                
-                <div class="view360-hotspot search-hotspot" data-yaw="-40" data-pitch="13" data-item="7">
-                    <span class="desc">Коромысло светло-коричневое с двумя крючками<br>Дерево, резьба, металл<br>длина 120 см.</span>
-                </div>                
-                <div class="view360-hotspot search-hotspot" data-yaw="70" data-pitch="8" data-item="8">
-                    <span class="desc">Лопата деревянная<br>Дерево, резьба<br>164x28</span>
-                </div>                
-                <div class="view360-hotspot search-hotspot" data-yaw="63.5" data-pitch="14" data-item="9">
-                    <span class="desc">Корзина плетенная<br>Дерево, плетение. Тальник, проволока алюминиевая<br>80x40</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="panorama">
-        <h2>Комната 2</h2>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/kochetovo/index.html">Комната 1</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="/kochetovo/room2.html">Комната 2</a>
+                </li>
+            </ul>
+        </nav>
         <div id="room2" class="view360-container is-16by9">    
             <canvas class="view360-canvas"></canvas>
             <div class="view360-hotspots">
@@ -115,13 +89,16 @@
             </div>
         </div>
     </div>
-    <dialog aria-label="Информация">
+
+
+        <dialog aria-label="Информация">
         <div class="panorama-info">
             <img src="" alt=""> 
             <div class="info"></div>   
             <button class="btn-close" autofocus>Закрыть</button>        
         </div>
     </dialog>
-    <script src="main.js"></script>
+    <script src="/kochetovo/main.js"></script>
+    
 </body>
 </html>

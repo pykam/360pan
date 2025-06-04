@@ -1,21 +1,45 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    color: #3c3c3c;
 }
 
-.panorama {
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
+h1 {
+    margin-bottom: 64px;
+    display: block;
+    text-align: center;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 90%);
+  opacity: 0.8;
+}
+
+dialog + .backdrop {
+  background-color: rgb(0 0 0 / 90%);
+}
+
+
+.container {
     width: 1200px;
-    height: 800px;
     margin: 0 auto;
     margin-bottom: 80px;
+    padding: 20px 20px;
+    box-shadow: 0px 0 8px 6px rgb(0 0 0 / 15%);
+    border-radius: 20px;
 }
 
 .desc {
     display: none;
-}
-
-.panorama-info {
-    text-align: center;
 }
 
 .info {
@@ -46,7 +70,7 @@ body{
 .search-hotspot::after {
     content: "";
     display: flex;
-    background-image: url(/images/search.svg);
+    background-image: url(/kochetovo/images/search.svg);
     background-position: center;
     background-repeat: no-repeat;
     width: 30px;
@@ -54,16 +78,19 @@ body{
 }
 
 dialog {
-    width: 500px;
     border: transparent;
     scrollbar-width: none;
     border-radius: 20px;
     transition: all 0.3s;
 }
 
+.panorama-info {
+    text-align: center;
+}
 dialog img {
     width: 100%;
-    object-fit: cover;
+    max-height: 500px;
+    object-fit: contain;
 }
 
 ::backdrop {
@@ -84,4 +111,40 @@ dialog img {
 
 .btn-close:active {
     border: 2px solid #ddd;
+}
+
+.view360-container {
+    box-shadow: 0px 0 8px 6px rgb(0 0 0 / 15%);
+    border-radius: 15px;
+}
+
+.navbar {
+    margin: 40px 0;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    padding: 20px 40px;
+    text-decoration: none;
+    border: 1px solid #c8c8c8;
+    border-radius: 20px;
+    background: white;
+    color: #3c3c3c;
+    box-shadow: 0px 0 8px 6px rgb(0 0 0 / 15%);
+}
+
+.active {
+    background: #e2e2e2;
+}
+
+.nav-link:hover {
+    border: 1px solid #303030;
 }
